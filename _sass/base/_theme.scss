@@ -1,33 +1,33 @@
-body{
-  $kruglendar-size: 2000px;
-  &>.bg{
-    height: 100%;
-    left: 0;
-    max-height: $kruglendar-size / 2;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    &:after{
-      animation-delay: -280s;
-      animation: spin1 300s infinite linear;
-      background: url(../img/krug.svg);
-      content: ' ';
-      display: block;
-      height: $kruglendar-size;
-      left: 50%;
-      margin-left: - $kruglendar-size / 2;
-      position: absolute;
-      top: 0;
-      transform-origin:center center;
-      width: $kruglendar-size;
-      z-index: -1;
-    }
-  }
-}
+/*body{*/
+  /*$kruglendar-size: 2000px;*/
+  /*&>.bg{*/
+    /*height: 100%;*/
+    /*left: 0;*/
+    /*max-height: $kruglendar-size / 2;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*z-index: -1;*/
+    /*&:after{*/
+      /*animation-delay: -280s;*/
+      /*animation: spin1 300s infinite linear;*/
+      /*background: url(../img/krug.svg);*/
+      /*content: ' ';*/
+      /*display: block;*/
+      /*height: $kruglendar-size;*/
+      /*left: 50%;*/
+      /*margin-left: - $kruglendar-size / 2;*/
+      /*position: absolute;*/
+      /*top: 0;*/
+      /*transform-origin:center center;*/
+      /*width: $kruglendar-size;*/
+      /*z-index: -1;*/
+    /*}*/
+  /*}*/
+/*}*/
 
-@keyframes spin1 {
-  0% { transform: rotate(360deg);}
-  100% { transform: rotate(0deg); }
-}
+/*@keyframes spin1 {*/
+  /*0% { transform: rotate(360deg);}*/
+  /*100% { transform: rotate(0deg); }*/
+/*}*/

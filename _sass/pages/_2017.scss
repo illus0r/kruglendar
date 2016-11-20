@@ -1,0 +1,19 @@
+svg#kruglendar-showcase{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4) translate(-400px, 0);
+  width: 1768px;
+  height: 1768px;
+  z-index: -1;
+  /*transform: scale(2);*/
+}
+
+.layout-page{
+  #cases>div{
+    color: #FF0000;
+    opacity: 0;
+    position: relative;
+    left: -100px;
+  }
+}

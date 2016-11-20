@@ -1,6 +1,6 @@
 var defaultParams = {
   locale: "en",
-  month_font: "Bebas Neue Light",
+  month_font: "Bebas Neue",
   month_font_weight: "100",
   external_css: ""
 };
@@ -50,7 +50,7 @@ moment.locale(params.locale);
 
 // kerning data
 var monthKerning = {
-  "Bebas Neue Light": {
+  "Bebas Neue": {
     "en": [
       "0 0 0 1.55 -0.85000008 0 -2.4299998",
       "0 0 0 0 0 -0.95000011 -0.54999995 -0.98999995",
@@ -68,7 +68,23 @@ var monthKerning = {
   }
 };
 
-var chosenKerning = [];
+//var chosenKerning = [];
+var chosenKerning = 
+[
+      "0 0 0 1.55 -0.85000008 0 -2.4299998",
+      "0 0 0 0 0 -0.95000011 -0.54999995 -0.98999995",
+      "",
+      "0 0 0 2.1899998 2.1399999",
+      "0 0 -4.4199996",
+      "",
+      "0 1.7300001 1.1800001 -8.46",
+      "0 0 0 0 0 -2.5899997",
+      "0 0 0 -3.1299989 -1.4000001 1.2 1.2299999",
+      "0 0 -2.0999999 -3.4299994",
+      "0 0 -2.1399999 -1.42 -0.75000006 1",
+      "0 0 -1.42 -1.2900001 0 1.33"
+    ];
+
 
 if (monthKerning[fontFamilyMonth] && monthKerning[fontFamilyMonth][params.locale]) {
   chosenKerning = monthKerning[fontFamilyMonth][params.locale];
@@ -83,10 +99,10 @@ var svg_size = [2104.72, 2979.92],
 var gap = 0.01, // gap for new year
 //var gap = 1/10., // gap for new year
 	angle_newyear = 0,
-	R = 0.4*svg_size[0], // outer radius
+	R = 0.40*svg_size[0], // outer radius
 	r = R/12; // inner radius
 //others
-var datesSpan = [new Date(2016, 0, 1), new Date(2016, 11, 31)];
+var datesSpan = [new Date(2017, 0, 1), new Date(2017, 11, 31)];
 //var fontFamily = "Roboto Condensed Light";
 //var fontFamilyWeekend = "Roboto";
 //var fontFamily = "Antonio";
@@ -117,8 +133,8 @@ var dateSeparator = 0.0002*svg_size[0];
 var fontFamilyMonth = params.month_font;
 var fontFamilyMonthWeight = params.month_font_weight;
 var monthes_font_size = 2.5*svg_size[1]/150;
-//var monthes_radius = R*0.78;
-var monthes_radius = R;
+var monthes_radius = R*0.78;
+//var monthes_radius = R;
 //var skew_factor = 1.2;
 var skew_factor = 0; // disable skewing
 var description_pos = [0.5, 0.98];
@@ -357,6 +373,7 @@ function draw(){
     var pLen = previousLen; //temp value
     previousLen += d.values.length;
     var color = colorScale((pLen+d.values.length/2)/dates.length);
+    console.log(chosenKerning);
     return {
       monthName: d.values[0].monthName,
       lenRelative: d.values.length / dates.length,
@@ -615,9 +632,9 @@ function draw(){
   label.append("text")
     .text("Kruglendar")
     .attr({
-      x: 0,
+      x: -2,
       y: 60,
-      style: "text-anchor: middle;font-size: 40px; letter-spacing: 5.4px; font-family:'Bebas Neue';",
+      style: "text-anchor: middle;font-size: 39px; letter-spacing: 5.4px; font-family:'Bebas Neue';",
     }); 
   label.append("text")
     .attr({
@@ -626,7 +643,7 @@ function draw(){
       style: "font-size:127px;text-anchor:middle;font-family:Bebas Neue; font-weight: bold;",
       dx: "-1.0802984 5.6619849 -2.1156566 4.49368",
     })
-  .text("2016");
+  .text("2017");
 
   //var copyrights = svg.append("text")
    //.attr({ 
@@ -704,7 +721,8 @@ function draw(){
     //.attr({
       //d: line(hypotrochoidArrayRaw.map(function(d){return [d[1]*sin(d[0]), d[1]*cos(d[0])]})),
       //id: "hypotrochoidRaw",
-      //style: "opacity: 0.9; stroke-width: 1px;"
+      //fill: "red",
+      //style: "opacity: 0.4; stroke-width: 1px;"
     //});
 }
 
