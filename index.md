@@ -110,4 +110,8 @@ In the wild
 {% include subscription-en.html %}
 </section>
 
+<section>
+{% include comments-disqus.html %}
+</section>
+
 {% include footer.html %}
