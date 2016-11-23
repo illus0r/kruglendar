@@ -1,64 +1,58 @@
 body{
   font-family: $font-family;
-  /*font-weight: 300;*/
   font-size: $font-size;
   line-height: 1.25;
 }
 
+h1,h2,h3,h4{
+  font-family: $font-family;
+  font-weight: bold;
+}
+
 h1{
-  font-size: 2.7em;
+  font-size: 2.55em;
+  margin-bottom: 0.65em;
+  margin-left: -0.06em;
   margin-top: 0.5em;
 }
+
 h2{
   margin-top: 1.0em;
 }
-h1,h2,h3,h4{
-  font-family: $font-family-sans;
-  font-weight: bold;
-  /*line-height: 1em;*/
-  /*margin-bottom: 0.5em;*/
-}
+
 p{
   margin: 0.5em 0;
   &.description{ 
-    font-family: $font-family-sans;
+    font-family: $font-family;
     font-size: 2em;
     margin: 0;
   }
 }
 
 ol, ul{
-  font-size: 0.8em;
-  margin-top: -0.7em;
+  margin-top: -0.5em;
 }
-/*ul{*/
-  /*margin: 0 0 0 1em;*/
-  /*li{*/
-    /*&:before{*/
-      /*@extend .star;*/
-      /*content: " ";*/
-      /*display: inline-block;*/
-      /*height: 1em;*/
-      /*width: 1em;*/
-      /*margin-right: 0.3em;*/
-      /*margin-left: -1.3em;*/
-    /*}*/
-  /*}*/
-/*}*/
-
 ul li{
   &:before{
     content: "- ";
   }
 }
-ol{
-  list-style: decimal;
-  margin: 0.8em 1.4em;
-}
+/*ol{*/
+  /*list-style: decimal;*/
+  /*margin: 0.8em 1.4em;*/
+/*}*/
 
+$color-link: $color-blue;
 a{
-  color: $color-blue;
+  cursor: pointer;
+  @include underlined-link($color-link);
   &:visited{
-    color: darken($color-blue, 20%);
+    $color-link-visited: darken($color-link, 10);
+    @include underlined-link($color-link-visited);
+  }
+  &:active, &:hover{
+    /*opacity: 0.5;*/
+    $color-link-active: lighten($color-link, 10);
+    @include underlined-link($color-link-active);
   }
 }

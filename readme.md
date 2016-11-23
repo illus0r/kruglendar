@@ -7,21 +7,17 @@ Hi there! *Kruglendar* is a minimalistic round calendar with a plenty of white s
 
 ![Kruglendar 2016](https://cloud.githubusercontent.com/assets/797993/12024972/e4fd23fa-adba-11e5-9b1e-76b7cb74b993.png)
 
-<a href="http://kruglendar.ru/en/" target="_blank">Download kruglendar 2016</a>
+Kruglendar — a minimalistic round calendar. I use it to:
 
-1. Print on А1 format
-1. Put it on a wall, place a marker beside.
-1. Mark the first event - kruglendar installation :)
+- Remember about special events
+- Meet deadlines
+- Plan trips
+- Keep memories
+- Make habits
 
-That's how I use my circle calendar:
+It's free: download a PDF and print it on A2 or bigger.
 
-* Draw pictures for important events.
-* Plan trips and conferences.
-* If my life gets boring, I see and fix it.
-
-In the end of the year it looks like this:
-
-<img src="https://cloud.githubusercontent.com/assets/797993/12012448/bee53826-ad04-11e5-8f9a-b880d8e90ca1.png" alt="Circle calendar in the end of the year" width="500px" />
+Learn how to use it and download it here: <a href="http://kruglendar.ru/" target="_blank">www.kruglendar.ru</a>.
 
 DIY tips
 ---

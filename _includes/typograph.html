@@ -1,0 +1,23 @@
+{% assign nobrs =" а&nbsp;| в&nbsp;| и&nbsp;| к&nbsp;| о&nbsp;| с&nbsp;| у&nbsp;| я&nbsp;| во&nbsp;| вы&nbsp;| да&nbsp;| до&nbsp;| за&nbsp;| из&nbsp;| ко&nbsp;| мы&nbsp;| на&nbsp;| не&nbsp;| ни&nbsp;| но&nbsp;| ну&nbsp;| об&nbsp;| он&nbsp;| от&nbsp;| ох&nbsp;| по&nbsp;| со&nbsp;| та&nbsp;| те&nbsp;| то&nbsp;| ту&nbsp;| ты&nbsp;| уж&nbsp;| при&nbsp;| или&nbsp;| что&nbsp;| без&nbsp;| А&nbsp;| В&nbsp;| И&nbsp;| К&nbsp;| О&nbsp;| С&nbsp;| У&nbsp;| Я&nbsp;| Во&nbsp;| Вы&nbsp;| Да&nbsp;| До&nbsp;| За&nbsp;| Из&nbsp;| Ко&nbsp;| Мы&nbsp;| На&nbsp;| Не&nbsp;| Ни&nbsp;| Но&nbsp;| Ну&nbsp;| Об&nbsp;| Он&nbsp;| От&nbsp;| Ох&nbsp;| По&nbsp;| Со&nbsp;| Та&nbsp;| Те&nbsp;| То&nbsp;| Ту&nbsp;| Ты&nbsp;| Уж&nbsp;| При&nbsp;| Или&nbsp;| Что&nbsp;| Без&nbsp;| a&nbsp;| and&nbsp;| as&nbsp;| at&nbsp;| but&nbsp;| by&nbsp;| if&nbsp;| in&nbsp;| nor&nbsp;| of&nbsp;| on&nbsp;| or&nbsp;| per&nbsp;| so&nbsp;| the&nbsp;| to&nbsp;| up&nbsp;| via&nbsp;| A&nbsp;| And&nbsp;| As&nbsp;| At&nbsp;| But&nbsp;| By&nbsp;| If&nbsp;| In&nbsp;| Nor&nbsp;| Of&nbsp;| On&nbsp;| Or&nbsp;| Per&nbsp;| So&nbsp;| The&nbsp;| To&nbsp;| Up&nbsp;| Via&nbsp;|&nbsp;— " | split: "|" %}
+
+{% assign parts = include.content | split:"</pre>" %}
+{% assign parts_output = "" | split: "" %}
+{% for part in parts %}
+  {% assign part_parts = part | split:"<pre" %}
+  {% assign text = part_parts.first %}
+
+  {% comment %}  Processing  {% endcomment %}
+
+  {% for nobr in nobrs %}
+    {% assign pattern = nobr | replace: "&nbsp;"," " %}
+    {% assign replacement = nobr %}
+    {% assign text = text | replace: pattern, replacement %}
+  {% endfor %}
+
+
+  {% assign part_parts = part_parts | shift %}
+  {% assign part_parts = part_parts | unshift: text %}
+  {% assign part_output = part_parts | join: "<pre" %}
+  {% assign parts_output = parts_output | push: part_output %}
+{% endfor %}
+{{ parts_output | join: "</pre>" }}

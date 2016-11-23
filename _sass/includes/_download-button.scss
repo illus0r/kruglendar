@@ -1,0 +1,17 @@
+.include-download-buttons{
+  margin-top: 20px;
+  .btn{
+    margin-bottom: 10px;
+  }
+  .download-buttons-big{
+    .btn{
+      text-align: center;
+      padding: 23px 10px;
+      font-size: 2.23em;
+      width: 100%;
+    }
+    a.free{
+      margin-top: 1em;
+    }
+  }
+}

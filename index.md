@@ -1,98 +1,113 @@
 ---
 layout: page
 title: Kruglendar — the diary poster
+css_classes: 2017
 ---
 
-I believe, this calendar is the most convenient way to have a bird view on the whole year.
+<section id="kruglendar-image" markdown="1">
+![Kruglendar — round calendar](img/kruglendar-2017-preview.png){:.kruglendar-preview}
+</section>
 
-Stick the poster beside your workplace. Or in the toilet. Put a thin marker nearby.
 
-Use it to make notes about future and past events. The finished kruglendar worth keeping it, so in few years you could unroll it to refresh your past adventures in memory and lift your mood.
-
-Buy printed kruglendar 2017
-
-Or download it for free and print on A2 paper
-
-What for
+<section id="description" class="half-width" markdown="1">
+Kruglendar — the diary poster
 ===
 
-<div markdown="1" id="cases">
+A convenient way to have a general view of the whole year.
 
+Stick the poster at your workplace or in your bathroom with a marker nearby.
+
+You can use it to jot notes about past and future events, but it’s much more than just a simple planner or calendar.
+
+The Kruglendar allows you to document important moments in your life, your achievements, your adventures, and your goals for the future.  It’s worth keeping the Kruglendar even after the year ends as a memory of your experiences.
+{% include download-btns.html %}
+</section>
+
+
+<section id="whatfor" class="half-width" markdown="1">
+What for
+===
+<div markdown="1" id="cases">
 <div markdown="1" data-name="birthdays" class="test">
-Stay aware of birthdays 
+Remember about special events
 ---
-Mark birthdays to buy presents in time. Mark concerts, exams, sport events to not to miss them and make your life brighter.
+With the Kruglendar, you will never forget to buy presents on your friend's birthday or flowers on your anniversary.  You can mark concerts, exams, and sport events that you don’t want to miss.
 </div>
 
 <div markdown="1" data-name="deadlines">
 Meet deadlines
 ---
-The best way to reach the goal is to set the deadline and feel it aproaching. Subscribe your project milestones to finish them in time and meet the deadline.
+The best way to reach a goal is to set a deadline and feel it approaching. Set milestones to your projects to finish them by the deadline.
 </div>
 
 <div markdown="1" data-name="trips">
 Plan trips
 ---
-Mark dates of departure and arrival, keep your preparation todo list binded to calendar.
+Mark departure and arrival times, keep your to do list linked to your calendar.
 
 Uh, right, you are not actually going to take the calendar with you to your journey, but it’s still helpful.
 </div>
 
 <div markdown="1" data-name="moments">
-Keep moments
+Keep memories
 ---
-Put down your acheavemtns and bright moments of your life. If you want to lift your mood, just look at it and refresh in your memory joyfull days of the year.
+Write down your achievements and document the year’s special moments. Years from now, you could look back on all the happiest moments of your life
 </div>
 
 <div markdown="1" data-name="habits">
 Make habits
 ---
-Play the ‘getting habits’ game! Make the checklist of 1—3 items to do them daily. Mark the days when you accomplished everything you aimed to.
+Play the “making habits” game! Make a checklist of 1—3 tasks to do daily. Mark the days when you accomplished everything you aimed to do.
 
-Here’s mine:
+Here’s my checklist:
 
 - Get up at 8:00AM
-- Read at least one page of the book.
+- Read at least one page of a book.
 
-Keep the chain of successfull days groing. When you fell you’ve made the habbit, remove it from the checklist to start a new one.
+When you feel you’ve made it a habit, remove it from the checklist to start a new one.
 </div>
 
 <div markdown="1" data-name="long-term">
 Mark events without specific date
 ---
-Sometimes you know an approximate event date only. Draw it somewhere around proper dates, far from the circle.
+Sometimes you know an approximate event date only. Draw it somewhere around dates, far from the circle.
 
 It allows you to make approximate plans, to note long term events like reading books or taking courses.
 </div>
-
 </div>
+</section>
 
-{% include social.html %}
 
-<div id="disqus_thread"></div>
-<script>
+{% comment %}
+<section id="whatfor" markdown="1">
+In the wild
+===
+![](/img/examples/1456720524922643.jpeg)
+![](/img/examples/1475131110733647.jpeg)
+![](/img/examples/4NLA5t7HfPc.jpg)
+![](/img/examples/V_8-pqmoacg.jpg)
+![](/img/examples/0SQHUs5jNoU.jpg)
+![](/img/examples/d7412c089efd43158e463ffc5874c82f.jpg)
+![](/img/examples/dDgw-gQAE1c.jpg)
+![](/img/examples/kCJVaBNJ2JA.jpg)
+![](/img/examples/obDHmir6J6M.jpg)
+![](/img/examples/rNRDze3-FAs.jpg)
+![](/img/examples/rodion.jpg)
+![](/img/examples/ujuaM5_tzys.jpg)
+![](/img/examples/2eRxJOL1y4c.jpg)
+{:.examples}
+</section>
+{% endcomment %}
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-var disqus_config = function () {
-this.page.url = "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "{{ page.path }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//EXAMPLE.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
-<script src="/bower_components/gsap/src/uncompressed/jquery.gsap.js"></script>
-<script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
-<script src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-<script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-<script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-<script src="/js/init.js"></script>
+<section>
+{% include download-btns.html is_big=true %}
+</section>
+
+
+<section id="social-tools">
+{% include social-en.html %}
+{% include subscription-en.html %}
+</section>
+
+{% include footer.html %}

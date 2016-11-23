@@ -1,5 +1,5 @@
 // add kruglendar to DOM
-$('body').prepend('<svg id="kruglendar-showcase"></svg>');
+$('body').prepend('<div id="kruglendar-showcase-wrapper"><svg id="kruglendar-showcase"></svg></div>');
 
 
 // hiding cases
@@ -19,7 +19,6 @@ Snap.load("/img/kruglendar-showcase.svg", function(f){
   casesInner.attr({transform: "translate(-100, 0)"});
   kruglendarShowcase = Snap("#kruglendar-showcase");
   kruglendarShowcase.append(artboard);
-
   initScrollMagic();
 });
 
@@ -87,37 +86,87 @@ function initScrollMagic(){
             }
           )
         );
-    var scene = new ScrollMagic.Scene({
-            triggerElement: "div[data-name="+$(this).data("name")+"]", 
-            duration: 40, 
-            offset: 200,
-            triggerHook: 'onEnter',
-            tweenChanges: true})
-        .setTween(tweenText)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-    var scene = new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
             triggerElement: "div[data-name="+$(this).data("name")+"]", 
             duration: 40, 
             offset: 200,
             triggerHook: 'onEnter',
             tweenChanges: true})
         .setTween(tweenSVG)
-        //.addIndicators() // add indicators (requires plugin)
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
             triggerElement: "div[data-name="+$(this).data("name")+"]", 
             duration: 20, 
             offset: 200,
             triggerHook: 'onEnter',
             tweenChanges: true})
         .setTween(tweenSVGTranslate)
-        //.addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+    new ScrollMagic.Scene({
+            triggerElement: "div[data-name="+$(this).data("name")+"]",
+            duration: 40, 
+            offset: 200,
+            triggerHook: 'onEnter',
+            tweenChanges: true})
+        .setTween(tweenText)
         .addTo(controller);
     var tweensCouple = [];
-    tweens.push([ tweenText, tweenSVG ]);
-    scenes.push(scene);
   });
+  // Showcase fading
+  new ScrollMagic.Scene({
+          triggerElement: "section#description", 
+          duration: 400, 
+          offset: 400,
+          triggerHook: 'onEnter',
+          tweenChanges: true})
+      .setTween(new TimelineMax().add(
+        TweenMax.to(
+          $("#artboard"), 
+          0.1, 
+          {
+            opacity: 1, 
+            ease:Linear.easeNone
+          }
+        )
+      ))
+      //.addIndicators()
+      .addTo(controller);
+  new ScrollMagic.Scene({
+          triggerElement: "section#whatfor", 
+          duration: 300, // 400
+          offset: $("section#whatfor").height() + 0, // + 200
+          triggerHook: 'onEnter',
+          tweenChanges: true})
+      .setTween(new TimelineMax().add(
+        TweenMax.to(
+          $("#artboard"), 
+          0.1, 
+          {
+            opacity: 0, 
+            ease:Linear.easeNone
+          }
+        )
+      ))
+      //.addIndicators()
+      .addTo(controller);
+  //var tweenArtboard = new TimelineMax()
+      //.add(
+        //TweenMax.to(
+          //$("#artboard"), 
+          //0.1, 
+          //{
+            //transform: "transform: translate(-50%, -52%) scale(1.4) translate(-400px, 0) rotate3d(0, 0, 1, 0deg);", 
+            //ease:Linear.easeNone
+          //}
+        //)
+      //);
+  //var sceneArtboard = new ScrollMagic.Scene({
+          //duration: 400, 
+          //offset: 200,
+          //tweenChanges: true})
+      //.setTween(tweenArtboard)
+      //.addIndicators() // add indicators (requires plugin)
+      //.addTo(controller);
   //// init controller
   //// build tween
   //var tween = new TimelineMax()
@@ -128,3 +177,4 @@ function initScrollMagic(){
           //.addIndicators() // add indicators (requires plugin)
           //.addTo(controller);
 }
+

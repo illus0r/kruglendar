@@ -1,11 +1,17 @@
-html, body{
-  /*height: 100%;*/
-}
 body *{
   box-sizing: border-box;
 }
 .container{
-  margin: 360px auto 0;
+  margin: 100px auto 0;
   width: $container-width;
-  padding: 0 40px 40px;
+  padding: 0 40px 0;
+}
+section{
+  margin-top: 56px;
+  &.half-width{
+    width: 50%;
+    h1{
+      width: 200%;
+    }
+  }
 }

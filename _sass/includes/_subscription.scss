@@ -1,0 +1,39 @@
+.include-subscription{
+  #mc_embed_signup, #mc_embed_signup_scroll{
+    width: 100%;
+  }
+  p{
+    margin-bottom: 11px;
+  }
+  div{
+    display: inline-block;
+  }
+  input{
+    /*float: left;*/
+    border: 2px solid $color-blue;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1em;
+    outline: none;
+    &[type="email"]{
+      padding: 10px 9px 10px;
+      width: 220px;
+      margin-right: -20px;
+      /*padding-right: 100px;*/
+      /*margin-right: -200px;*/
+      &:focus{
+        border-width: 4px; 
+        padding: 8px 7px 8px;
+      }
+    }
+    &#mc-embedded-subscribe{
+      /*margin-left: -200px;*/
+      @extend .btn;
+      margin-right: 0;
+    }
+  }
+  .clear{
+    float: right;
+  }
+}

@@ -1,19 +1,61 @@
-svg#kruglendar-showcase{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.4) translate(-400px, 0);
-  width: 1768px;
-  height: 1768px;
-  z-index: -1;
-  /*transform: scale(2);*/
-}
-
-.layout-page{
+.page-2017{
+  img.kruglendar-preview{
+    border: 1px solid rgba(0,0,0,0.09);
+    box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.2);
+    max-width: 100%;
+  }
+  svg#kruglendar-showcase{
+    height: 1768px;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -52%) scale(1.4) translate(-400px, 0);
+    width: 1768px;
+    z-index: -1;
+    #artboard{
+      opacity: 0;
+    }
+  }
   #cases>div{
     color: #FF0000;
+    left: -100px;
     opacity: 0;
     position: relative;
-    left: -100px;
+  }
+  section#social-tools{
+    &:after { // clearfix
+      content: "";
+      display: table;
+      clear: both;
+    }
+    p{
+      margin-top: 0;
+    }
+    .include-social, .include-subscription{
+      width: 50%;
+      float: left;
+    }
+    .likely{
+      display: block;
+      width: 90%;
+      margin-top: 11px;
+      .likely__widget{
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .examples{
+    width: 100%;
+    display: flex;
+    height: 1320px;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -10px;
+    img{
+      width: 32.633%;
+      margin: 0 1% 1% 0;
+      /*flex: 1 0 auto;*/
+    }
   }
 }

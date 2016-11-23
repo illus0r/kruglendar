@@ -1,16 +1,8 @@
 # Site settings
-title: Круглендарь 2017
-description: плакат-ежедневник
 email: ivan@dianov.org
 
-url:   http://kruglendar.ru # the base hostname & protocol for your site
+url:   http://kruglendar.ru
 repo:  https://github.com/illus0r/kruglendar-2016
 
 # Build settings
 markdown: kramdown
-
-sass:
-  sass_dir: _sass
-
-collections:
-  - sections
