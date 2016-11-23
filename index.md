@@ -2,6 +2,11 @@
 layout: page
 title: Kruglendar — the diary poster
 css_classes: 2017
+description: >
+  <p>A convenient way to have a general view of the whole year.</p>
+  <p>Stick the poster at your workplace or in your bathroom with a marker nearby.</p>
+  <p>You can use it to jot notes about past and future events, but it’s much more than just a simple planner or calendar.</p>
+  <p>The Kruglendar allows you to document important moments in your life, your achievements, your adventures, and your goals for the future.  It’s worth keeping the Kruglendar even after the year ends as a memory of your experiences.</p>
 ---
 
 <section id="kruglendar-image" markdown="1">
@@ -13,13 +18,8 @@ css_classes: 2017
 Kruglendar — the diary poster
 ===
 
-A convenient way to have a general view of the whole year.
+{{ page.description | markdownify }}
 
-Stick the poster at your workplace or in your bathroom with a marker nearby.
-
-You can use it to jot notes about past and future events, but it’s much more than just a simple planner or calendar.
-
-The Kruglendar allows you to document important moments in your life, your achievements, your adventures, and your goals for the future.  It’s worth keeping the Kruglendar even after the year ends as a memory of your experiences.
 {% include download-btns.html %}
 </section>
 
