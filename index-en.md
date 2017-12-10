@@ -11,7 +11,7 @@ description: >
 ---
 
 <section id="kruglendar-image" markdown="1">
-![Kruglendar — round calendar](img/kruglendar-2017-preview.png){:.kruglendar-preview}
+![Kruglendar — round calendar](img/kruglendar-2018-preview.png){:.kruglendar-preview}
 </section>
 
 

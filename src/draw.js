@@ -1,3 +1,5 @@
+var year = 2018;
+
 var defaultParams = {
   locale: "en",
   month_font: "Bebas Neue",
@@ -102,7 +104,7 @@ var gap = 0.01, // gap for new year
 	R = 0.40*svg_size[0], // outer radius
 	r = R/12; // inner radius
 //others
-var datesSpan = [new Date(2017, 0, 1), new Date(2017, 11, 31)];
+var datesSpan = [new Date(year, 0, 1), new Date(year, 11, 31)];
 //var fontFamily = "Roboto Condensed Light";
 //var fontFamilyWeekend = "Roboto";
 //var fontFamily = "Antonio";
@@ -263,19 +265,20 @@ function draw(){
   var hypotrochoidArray = hypotrochoidArrayRaw;
 
   var rainbow = [ 
-    [1,149,213],
-    [0.178,227],
-    //[5,167,170],
-    //[9,162,95],
-    [133,198,70],
-    [254,232,11],
-    [237,130,26],
-    [234,27,33],
-    [235,25,74],
-    [239,6,134],
-    [133,41,140],
-    [14,77,156],
-    [1,149,213],
+    [22,128,163],
+    [19,147,141],
+    [33,178,90],
+    [96,217,29],
+    [180,217,33],
+    [241,156,42],
+    [240,101,36],
+    [240,52,32],
+    [238,11,121],
+    [200,27,136],
+    [135,57,153],
+    [74,86,170],
+    [25,110,185],
+    [22,128,163]
     ]
     //[  0, 248, 193],
     //[  0, 246, 0  ],
@@ -291,7 +294,7 @@ function draw(){
   //console.log(0, 1.0, 1.0 / (rainbow.length-1));
   var colorScale = d3.scale.linear()
     //.domain(d3.range(0, 1.0, 1.0 / (rainbow.length-1)))
-    .domain([0, 0.09, 0.18, 0.36, 0.45, 0.54, 0.63, 0.72, 0.81, 0.90, 1])
+    .domain([0, 0.042, 0.13, 0.21, 0.29, 0.38, 0.46, 0.54, 0.63, 0.71, 0.79, 0.88, 0.96, 1])
     //.domain([ 0, 0.166, 0.333, 0.5, 0.666, 0.833, 1])
     //.domain([ 0, 0.166, 0.233, 0.5, 0.666, 0.833 ])
     //.domain([ 0, 0.2, 0.3, 0.4, 0.6, 0.8, 1])
@@ -591,23 +594,18 @@ function draw(){
       + "," 
       + svg_size[1]*description_pos[1]
       + ")",
-     style: "font-size:"+decoration_font_size+"px;text-align:center;text-anchor:middle;font-family:Roboto Condensed;letter-spacing:0.01em;",
+     style: "font-size:"+decoration_font_size+"px;text-align:center;text-anchor:middle;font-family:Roboto;letter-spacing:0.01em;font-stretch=condensed",
     });
   description.append("tspan")
     .attr({ 
       "xml:space": "preserve",
     })
-    .text("Kruglendar — the poster diary. Download from ");
+    .text("Get your poster diary from ");
   description.append("tspan")
     .attr({ 
       style: "font-weight: bold; /*text-decoration: underline;*/ fill: #0195d5;",
     })
     .text("www.kruglendar.ru");
-  description.append("tspan")
-    .attr({ 
-      "xml:space": "preserve",
-    })
-    .text(" for free");
     //.text(" for free · ");
   //description.append("tspan")
     //.attr({
@@ -632,9 +630,9 @@ function draw(){
   label.append("text")
     .text("Kruglendar")
     .attr({
-      x: -2,
+      x: -1,
       y: 60,
-      style: "text-anchor: middle;font-size: 39px; letter-spacing: 5.4px; font-family:'Bebas Neue';",
+      style: "text-anchor: middle;font-size: 39px; letter-spacing: 5.5px; font-family:'Bebas Neue';",
     }); 
   label.append("text")
     .attr({
@@ -643,7 +641,7 @@ function draw(){
       style: "font-size:127px;text-anchor:middle;font-family:Bebas Neue; font-weight: bold;",
       dx: "-1.0802984 5.6619849 -2.1156566 4.49368",
     })
-  .text("2017");
+  .text(year);
 
   //var copyrights = svg.append("text")
    //.attr({ 

@@ -2,7 +2,7 @@
 permalink: /ru/
 layout: page
 title: Круглендарь — плакат-ежедневник
-css_classes: 2017
+css_classes: 2017 #bad name, change to „white-theme“ i. e.
 description: >
   <p>A convenient way to have a general view of the whole year.</p>
   <p>Stick the poster at your workplace or in your bathroom with a marker nearby.</p>
@@ -11,7 +11,7 @@ description: >
 ---
 
 <section id="kruglendar-image" markdown="1">
-![Kruglendar — round calendar](/img/kruglendar-2017-preview.png){:.kruglendar-preview}
+![Kruglendar — round calendar](/img/kruglendar-2018-preview.png){:.kruglendar-preview}
 </section>
 
 
