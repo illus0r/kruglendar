@@ -4,6 +4,7 @@ email: ivan@dianov.org
 
 url:   http://kruglendar.ru
 repo:  https://github.com/illus0r/kruglendar
+year:  2018
 
 # Build settings
 markdown: kramdown
