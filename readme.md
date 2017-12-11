@@ -1,11 +1,11 @@
-Kruglendar 2016 — the diary poster
+Kruglendar — the diary poster
 ===
 
 Hi there! *Kruglendar* is a minimalistic round calendar with a plenty of white space to make notes. I use it for sketching past events and planning.
 
 *Krug* means *circle* in russian.
 
-![Kruglendar 2016](https://cloud.githubusercontent.com/assets/797993/12024972/e4fd23fa-adba-11e5-9b1e-76b7cb74b993.png)
+![Kruglendar](https://cloud.githubusercontent.com/assets/797993/12024972/e4fd23fa-adba-11e5-9b1e-76b7cb74b993.png)
 
 Kruglendar — a minimalistic round calendar. I use it to:
 
