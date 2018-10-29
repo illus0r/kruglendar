@@ -1,0 +1,10 @@
+- Rebuild calendar
+  - Change date range in src/draw.js
+  - Get SVG, process it in 
+- Update site
+  - Make new preview
+  - Update year in _config.yml
+- Update RedBubble
+  - Image
+  - Title?
+- Send mailchimp newsletter

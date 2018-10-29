@@ -1,4 +1,9 @@
-var year = 2018;
+var year = 2023;
+//var yearKerning = "-1 8 -3 7" // 2019
+// var yearKerning = "0 5 5 5"; // 2020
+// var yearKerning = "2 9 9 0"; // 2021
+//var yearKerning = "0 6 6 3"; // 2022
+var yearKerning = "0 6 5 5"; // 2023
 
 var defaultParams = {
   locale: "en",
@@ -639,7 +644,7 @@ function draw(){
       x: "0.017473536",
       y: "0.48287916",
       style: "font-size:127px;text-anchor:middle;font-family:Bebas Neue; font-weight: bold;",
-      dx: "-1.0802984 5.6619849 -2.1156566 4.49368",
+      dx: yearKerning,
     })
   .text(year);
 
