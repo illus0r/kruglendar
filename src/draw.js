@@ -1,9 +1,9 @@
-var year = 2023;
-//var yearKerning = "-1 8 -3 7" // 2019
+var year = 2019;
+var yearKerning = "-1 8 -3 7" // 2019
 // var yearKerning = "0 5 5 5"; // 2020
 // var yearKerning = "2 9 9 0"; // 2021
 //var yearKerning = "0 6 6 3"; // 2022
-var yearKerning = "0 6 5 5"; // 2023
+//var yearKerning = "0 6 5 5"; // 2023
 
 var defaultParams = {
   locale: "en",
@@ -284,6 +284,20 @@ function draw(){
     [74,86,170],
     [25,110,185],
     [22,128,163]
+    //"cmyk(0,0,0,100)",
+    //"cmyk(100,0,0,0)",
+    //"cmyk(0,100,0,0)",
+    //"cmyk(0,0,100,0)",
+    //"cmyk(0,0,0,100)",
+    //"cmyk(100,0,0,0)",
+    //"cmyk(0,100,0,0)",
+    //"cmyk(0,0,100,0)",
+    //"cmyk(0,0,0,100)",
+    //"cmyk(100,0,0,0)",
+    //"cmyk(0,100,0,0)",
+    //"cmyk(0,0,100,0)",
+    //"cmyk(0,0,0,100)",
+    //"cmyk(100,0,0,0)"
     ]
     //[  0, 248, 193],
     //[  0, 246, 0  ],
@@ -373,13 +387,14 @@ function draw(){
     d.color = colorScale(d.theta/hypotrochoidAngleSpan)
   });
 
-  var previousLen = 0;
+  var previousLen = 0; //TODO remove
+  var index = 0;
   var monthes = d3.nest()
   .key(function(d){ return d.month; })
   .entries(dates)
   .map(function(d){
     var pLen = previousLen; //temp value
-    previousLen += d.values.length;
+    previousLen += d.values.length; // TODO remove
     var color = colorScale((pLen+d.values.length/2)/dates.length);
     console.log(chosenKerning);
     return {

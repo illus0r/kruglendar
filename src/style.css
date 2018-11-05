@@ -34,4 +34,16 @@ body{
   .customizer {
     display: none;
   }
+  body{
+    width: 2105px;
+    height: 2980px;
+    background: none;
+    margin: 0;
+    /*
+    In chrome printing dialog set:
+    - A1 size;
+    - no margins;
+    - 159% scale.
+    */
+  }
 }
