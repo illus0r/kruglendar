@@ -1,14 +1,9 @@
-var year = 2019;
-var yearKerning = "-1 8 -3 7" // 2019
-// var yearKerning = "0 5 5 5"; // 2020
-// var yearKerning = "2 9 9 0"; // 2021
-//var yearKerning = "0 6 6 3"; // 2022
-//var yearKerning = "0 6 5 5"; // 2023
 
 var defaultParams = {
   locale: "en",
   month_font: "Bebas Neue",
   month_font_weight: "100",
+  year: 2020,
   external_css: ""
 };
 
@@ -55,7 +50,28 @@ if (params.external_css !== "") {
 document.body.setAttribute('lang', params.locale);
 moment.locale(params.locale);
 
-// kerning data
+var year = parseInt(params.year);
+
+switch(year){
+	case 2019:
+		var yearKerning = "-1 8 -3 7"
+		break
+	case 2020:
+		var yearKerning = "0 5 5 5"
+		break
+	case 2021:
+		var yearKerning = "2 9 9 0"
+		break
+	case 2022:
+		var yearKerning = "0 6 6 3"
+		break
+	case 2023:
+		var yearKerning = "0 6 5 5"
+		break
+	default:
+		var yearKerning = ""
+}
+
 var monthKerning = {
   "Bebas Neue": {
     "en": [
