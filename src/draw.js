@@ -666,13 +666,13 @@ function draw(){
   label.append("text")
     .text("Kruglendar")
     .attr({
-      x: -1,
+      x: 0,
       y: 60,
       style: "text-anchor: middle;font-size: 39px; letter-spacing: 5.5px; font-family:'Bebas Neue';",
     }); 
   label.append("text")
     .attr({
-      x: "0.017473536",
+      x: "0",
       y: "0.48287916",
       style: "font-size:127px;text-anchor:middle;font-family:Bebas Neue; font-weight: bold;",
       dx: yearKerning,
