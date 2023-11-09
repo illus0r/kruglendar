@@ -36,6 +36,22 @@
 
     <!--{% include fork-me.html %}-->
 
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var currentDate = new Date();
+				var currentYear = currentDate.getFullYear();
+				var nextYear = currentDate.getMonth() >= 8 ? currentYear + 1 : currentYear;
+
+				// Заменяем `YEAR_NUMBER` на текущий или следующий год в тексте страницы
+				document.body.innerHTML = document.body.innerHTML.replace(/YEAR_NUMBER/g, nextYear);
+
+				var links = document.querySelectorAll('a[href*="YEAR_NUMBER"]');
+				links.forEach(function (link) {
+					link.href = link.href.replace(/YEAR_NUMBER/g, nextYear);
+				});
+			});
+		</script>
+
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
     <script src="/bower_components/gsap/src/uncompressed/jquery.gsap.js"></script>
